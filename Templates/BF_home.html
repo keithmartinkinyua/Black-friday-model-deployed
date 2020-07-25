@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DEEP THINKERS ANALYTICS</title>
+	  <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename = 'BF_home.css') }}">
+
+</head>
+<body>
+	<div id = "container"> 
+
+
+		<div id= "navigation" > 
+				<ul>
+				  <li><a href="file:///home/tech-iguana/Documents/Black-friday-web-app/Templates/BF_home.html"> Deep Thinkers </a> </li>
+				  <li><a href="file:///home/tech-iguana/Documents/Black-friday-web-app/Templates/BF_home.html"> Predictions </a> </li>
+				  <li><a href="file:///home/tech-iguana/Documents/Black-friday-web-app/Templates/BF_home.html">Contact</a></li>
+				  <li><a href="file:///home/tech-iguana/Documents/Black-friday-web-app/Templates/BF_home.html">About us</a></li>
+				</ul>
+		</div>
+
+
+		<div id = "image"> </div>
+		<div id = "bady"> 
+			<center>
+			<div id = "inner-bady"> 
+
+				</br>
+				</br>
+				<h3><u><b>Welcome to black friday analysis a project that was done by Deep Thinkers Analytics</b></u></h3>
+
+				<p>Description
+							The dataset here is a sample of the transactions made in a retail store. The store wants to know better the customer purchase behaviour against different products. Specifically, <b>here the problem is a regression problem where we are trying to predict the dependent variable (the amount of purchase) </b>with the help of the information contained in the other variables.
+
+							<b>Classification problem can also be settled in this dataset since several variables are categorical</b>s, and some other approaches could be "Predicting the age of the consumer" or even "Predict the category of goods bought". This dataset is also particularly convenient for clustering and maybe find different clusters of consumers within it.
+
+							Acknowledgements
+							The dataset comes from a competition hosted by Analytics Vidhya.</p>
+
+
+
+
+
+					<img src= "{{ url_for('static', filename='graph.jpg') }}"></img>
+a
+				<form action="/" method = "POST">
+
+					
+
+					<h3>What is the Occupation of the customer: </h3>
+					<input type="number" id="occupation" name="occupation" placeholder="occ">
+
+
+					<!-- <h3>What is the age of the customer: </h3>
+					<input id="age" name="age" placeholder="age">
+
+					<h3>What's product_cartegory: </h3>
+					<input type="number" id="product1" name="product1" placeholder="productcategory-1">
+
+					<h3>What's the product_category: </h3>
+					<input type="number" id="product2" name="product2" placeholder="productcategory-2"> -->
+
+						</br>
+						</br>
+						</br>
+
+					  <input type="submit" class= "btn-info" value="Predict">
+					  </br>
+					</form> 
+
+					{% if predire %}
+						<p>Prediction for purchase is: {{predire}}</p>
+					  
+					  	<h3>With an accuracy of 99% <h3>
+
+					{% endif %}
+
+			</div>
+		</center>
+
+
+
+			
+		</div>
+	
+
+	 
+	<div id = "footer"> 
+		<center>
+		</br>
+		</br>
+		</br>
+
+					<p>Presented to you by </p>
+					<a href="https://www.linkedin.com/in/keith-martin-39b584148/">
+					<img src= "{{ url_for('static', filename='linked.jpg') }}" width="5" height="5"></img></a>
+					</br>
+					<b>KEITH MARTIN - C.E.O Deep Thinkers Analytics</b>
+					<p>Pleasure was all mine.</p>
+
+
+		<form action="" method = "POST"> 
+				<h4>  <p>Feel free to give you comments in the comment section below </p>   </h4>
+				<textarea rows = "2" cols="80"> </textarea>
+			</br>
+			</form>
+		</br>
+		<input type="submit" value="Send">
+		</center>
+
+	</div>
+</div>
+</body>
+</html>
